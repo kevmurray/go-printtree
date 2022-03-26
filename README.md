@@ -1,4 +1,4 @@
-# go-printtree
+# printtree
 
 Printtree is a Go module that allows you to define a tree of data then print that data as a
 tree, ordered, or unordered list in a variety of styles.
