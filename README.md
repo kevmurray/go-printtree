@@ -13,70 +13,48 @@ For example, given a tree constructed with
 	root.AddBranch("Color").AddBranches("red", "green", "blue")
 ```
 
-This can be printed in a variety of ways:
+This can be printed as a structured tree:
 
 **ASCII tree**
 ```
-Monitors
-|-- Monochrome
-|   |-- Old School
-|   |   |-- black
-|   |   '-- green
-|   '-- Contemporary
-|       |-- black
-|       '-- white
-'-- Color
-    |-- red
-    |-- green
-    '-- blue
+ASCII tree                    Box tree
+----------                    --------
+Monitors                      Monitors
+|-- Monochrome                ├── Monochrome
+|   |-- Old School            │   ├── Old School
+|   |   |-- black             │   │   ├── black
+|   |   '-- green             │   │   ╰── green
+|   '-- Contemporary          │   ╰── Contemporary
+|       |-- black             │       ├── black
+|       '-- white             │       ╰── white
+'-- Color                     ╰── Color
+    |-- red                       ├── red
+    |-- green                     ├── green
+    '-- blue                      ╰── blue
 ```
 
-**Box characters**
+Or as lists
 ```
-Monitors
-├── Monochrome
-│   ├── Old School
-│   │   ├── black
-│   │   ╰── green
-│   ╰── Contemporary
-│       ├── black
-│       ╰── white
-╰── Color
-    ├── red
-    ├── green
-    ╰── blue
-```
-
-**Unordered list**
-```
-Monitors
-● Monochrome
-  ○ Old School
-    ■ black
-    ■ green
-  ○ Contemporary
-    ■ black
-    ■ white
-● Color
-  ○ red
-  ○ green
-  ○ blue
-```
-
-**Ordered list**
-```
-Monitors
-  1. Monochrome
-      a. Old School
-          i. black
-         ii. green
-      b. Contemporary
-          i. black
-         ii. white
-  2. Color
-      a. red
-      b. green
-      c. blue
+Unordered list                Ordered list
+--------------                ------------
+Monitors                      Monitors
+● Monochrome                    1. Monochrome
+  ○ Old School                      a. Old School
+    ■ black                             i. black
+    ■ green                            ii. green
+  ○ Contemporary                    b. Contemporary
+    ■ black                             i. black
+    ■ white                            ii. white
+● Color                         2. Color
+  ○ red                             a. red
+  ○ green                           b. green
+  ○ blue                            c. blue
 ```
 
 Or you can define your own structural tree, ordered, or unordered list style.
+
+## Features
+- Simple tree building
+- Trees can be sorted
+- Many pre-defined tree and list styles
+- Customizable tree and list styles
